@@ -44,13 +44,13 @@ priv_key_with_version = address_prefix_1.concat(priv_key)
 priv_key_with_compression_flag = compressed ? priv_key_with_version.concat(compression_flag) : priv_key_with_version
 
 #SHA256 the Key twice
-doubleHash = SHA256(SHA256(priv_key_with_compression_flag))
+double_hash = SHA256(SHA256(priv_key_with_compression_flag))
 
 #Store the first 4 bytes as a checksum
 checksum = $hash256[0..7]
 
 #Include the checksum at the end of the private Key
-priv_key_with_checksum = priv_key_with_compression_flag.concat(checksum)
+priv_key_with_checksum = double_hash.concat(checksum)
 
 #Encode the private key in base58
 base58_priv_key = base58encode(priv_key_with_checksum)
