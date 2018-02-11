@@ -1,3 +1,6 @@
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/590046c13de44602b36d561b6868a98c)](https://app.codacy.com/app/llk23r/BitcoinAddressGenerator?utm_source=github.com&utm_medium=referral&utm_content=llk23r/BitcoinAddressGenerator&utm_campaign=badger)
+
 <center>Install necessary gems:</center>
 
 `gem install ecdsa securerandom digest rubygems rqrcode`
